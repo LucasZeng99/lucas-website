@@ -5,67 +5,46 @@
 }
 
 html {
-  background-color: #e8dbbe;
-  font-size: 20px;
+  background-color: rgba(#e8dbbe, 0.7);
+  font-size: 3.2vh;
   font-family: 'Lato', 'Arial', sans-serif;
   font-weight: 300;
   text-rendering: optimizeLegibility;
 }
 
-.row{
-  max-width: 1140px;
-  margin: 0 auto;
-}
 
 /* ======================^^ BASIC SETUP ^^=======================*/
 header {
   background-image:/* linear-gradient(rgba(26, 42, 21, 0.2), rgba(26, 42, 21, 0.4)),*/ url("img/header-green.jpeg");
   background-position: center;
   background-size: cover;
-  height: 100vh;
-}
-
-.hero-text-box {
-  /* background-color: yellow; */
-  position: absolute;
-  width: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: auto;
 }
 
 .text-link {
   color: #fff;
 }
 
-.logo {
-  position: absolute;
-  height: 100px;
-  width: auto;
-  border-radius: 50%;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .main-nav {
-  float: right;
   list-style: none;
-  margin-top: 20px;
+  margin: 20px 0;
+  margin-left: 40px;
+  height: 9vh;
 }
 
 .main-nav li {
+  margin-top: 1.6vh;
   display: inline-block;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
   color: #fff;
-  margin-left: 25px;
+  margin-right: 1vh;
   padding: 10px 10px;
   transition: border 0.2s, background-color 0.3s;
   text-decoration: none;
-  font-size: 110%;
+  font-size: 1em;
 }
 
 .main-nav li a:hover,
@@ -73,26 +52,30 @@ header {
   background-color: rgba(194, 194, 194, 0.3);
   border-bottom: 3px solid rgb(142, 179, 86); /*神他妈淡萌黄hhh, get from wikipedia japenese palette.*/
 }
-
 /*==================vvv REUSABLE CLASSES vvvv==================== */
 
 .btn:link,
 .btn:visited {
   display: inline-block;
-  text-decoration: none;
-  transition: background-color 0.3s, color 0.3s;
 }
 
 .btn:hover,
 .btn:active {
   color: #e0e0e0;
-  background-color: rgba(76, 76, 76, 0.2);
+  background-color: rgba(91, 91, 91, 0.4);
+  border-bottom: 3px solid rgb(142, 179, 86);
 }
 
-h1 {
-  margin: 0;
-  padding: 20px 20px;
+.main-nav h1 {
+  padding: 0;
+  margin-left: 0;
+
   font-weight: 300;
-  font-size: 3em;
-  border: 2px solid #fff;
+  font-size: 1.3em;
+}
+
+.main {
+  margin-top: 10vh;
+  float: left;
+  display: inline-block;
 }

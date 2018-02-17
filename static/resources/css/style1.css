@@ -1,0 +1,107 @@
+
+/* xs < 768 */
+@media screen and (max-width: 767px) {
+  body {
+      font-size: 0.9em!important;
+  }
+}
+
+/* sm */
+@media screen and (min-width: 768px) {
+  body {
+      font-size: 1rem!important;
+  }
+}
+
+/* md */
+@media screen and (min-width: 992px) {
+  body {
+      font-size: 1.2rem!important;
+  }
+}
+
+/* lg */
+@media screen and (min-width: 1200px) {
+  body {
+      font-size: 1.3rem!important;
+  }
+}
+
+body {
+  font-family: 'Lato'!important;
+}
+
+body > div.container > div.row.row-header.text-center > h2{
+  font-weight: 400;
+  font-size: 3rem;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(163, 168, 159);
+}
+body > header > nav > div.navbar{
+  background-image: url("img/green-compressed.jpg");
+  background-position: top;
+  background-size: cover;
+  font-size: 1.5rem;
+  border-radius: 0 0 15px 15px;
+}
+body > header > nav > div.navbar> div > ul > li.nav-item {
+  margin-right: 1rem;
+}
+body > header > nav > div.navbar> div > ul > li.nav-item > a{
+  color: rgb(225, 225, 225);
+  text-decoration: none;
+}
+body > header > nav > div.navbar> div > ul > li.nav-item> a:hover{
+  background-color: #257470a1;
+  transition: background-color 0.2s;
+}
+.container {
+  margin-top: 80px;
+}
+
+body > div.header-img {
+  border-radius: 0 0 15px 15px;
+  height: 30rem;
+  background-image: linear-gradient(rgba(207, 255, 221, 0),rgba(14, 17, 15, 0.7)), url("img/green-compressed.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+
+body > header > nav > div > div > ul > li.nav-item.dropdown.show > div{
+  background-color: #f1f4f2;
+}
+
+body > header > nav > div > div > ul > li.nav-item.dropdown.show > div > a:hover {
+  color: #fff;
+  background-color: #2c642e;
+  transition: background-color 0.2s;
+}
+body > div.container > div.row.project-items {
+  height: auto;
+  margin-bottom: 100px;
+}
+
+body > div.container > div.row.project-items > a > img {
+  display: block;
+  height: 120px;
+  margin: 10px auto;
+}
+body > div.container > div.row.project-items > a{
+  color: black;
+  height: auto;
+  margin: 0 10px;
+  transition: border 0.2s, background-color 0.3s!important;
+  text-decoration: none!important;
+  border-bottom: 3px solid white!important;
+}
+body > div.container > div.row.project-items > a:hover
+{
+  color: black;
+  text-decoration: none!important;
+  border-radius: 1%;
+  border-bottom: 3px solid #66754d!important;
+  background-color: rgb(205, 209, 186)!important;
+}

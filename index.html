@@ -1,28 +1,124 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="static/vendors/css/grid.css">
-    <link rel="stylesheet" href="static/vendors/css/normalize.css">
-    <link rel="stylesheet" href="static/resources/css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
-    <title>Lucas' Blog</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="row">
-            <ul class="main-nav">
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Resources</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet">
+  <link rel="stylesheet" href="static/resources/css/style1.css">
+  <link rel="stylesheet" href="static/vendors/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="static/vendors/css/bootstrap.min.css">
+
+  
+  <title>Lucas Zeng</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="navbar navbar-expand-md fixed-top">
+        <div class="navbar-nav-scroll">
+          <ul class="navbar-nav bd-navbar-nav flex-row">
+            <li class="nav-item"><a href="/" class="nav-link">Lucas Zeng</a></li>
+            <li class="nav-item"><a href="https://github.com/LucasZeng99" target="_blank" class="nav-link">Github</a></li>
+            <li class="nav-item"><a href="https://www.linkedin.com/in/zichangzeng/" target="_blank" class="nav-link">LinkedIn</a></li>
+            <li class="nav-item dropdown show">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Links</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="https://www.linkedin.com/in/zichangzeng/">LinkedIn</a>
+                <a class="dropdown-item" href="https://github.com/LucasZeng99">Github</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="mailto:lucaszeng99@gmail.com" target="_top" class="nav-link" alt="mailto me">mailto:lucaszeng99@gmail.com</a></li>
+          </ul>
         </div>
-      </nav>
-      <img src="static/resources/img/logo.jpg" alt="Lucas Logo" class="logo">
-      <div class="hero-text-box">
-        <a href="/" class="btn text-link"><h1>Lucas Zeng</h1></a>
+
       </div>
-    </header>
-  </body>
+    </nav>
+
+  </header>
+  <div class="header-img"><div></div></div>
+  <div class="container">
+    <div class="row row-header text-center">
+      <h2>Projects</h2>
+    </div>
+    <div class="row project-items">
+      <div class="col">
+
+      </div>
+      <a class="col-3 text-center" href="#">
+          <h3>Windows7 Puzzle Solver</h3>
+          <img src="static/vendors/img/puzzle.png" alt="puzzle">
+      </a>
+      <a class="col-3 text-center" href="#">
+          <h3>Shooting game</h3>
+          <img src="static/vendors/img/aircraft.png" alt="puzzle">
+      </a>
+      <a class="col-3 text-center" href="#">
+          <h3>Something else</h3>
+      </a>
+      <div class="col">
+
+      </div>
+    </div>
+    <div class="container text-center">
+      <div class="row no-gutters">
+        <div class="col-6 m-auto mt-4 p-3">
+          <h2>Vue-source import in html file</h2>
+          <p style="text-align: left; margin-top: 30px;">We have to put the source file below the body.<br>
+            and our own main.js must be put under the imported vue.js file.</p>
+          </div>
+        </div>
+      </div>
+<!--
+    <div class="row row-header text-center">
+      <h2>Experience</h2>
+    </div>
+    <div class="row experience-item">
+        <div class="col-2">
+        </div>
+        <h3 class="col-2 text-center">Internship the fuck</h3>
+        <ul class="col-6">
+          <li>software developer at ...</li>
+          <li>building and using tests to improve existing projects</li>
+          <li>April,2019 to August,2019</li>
+        </ul>
+        <div class="col-2">
+        </div>
+    </div>
+    <div class="row experience-item">
+        <div class="col-2">
+        </div>
+        <h3 class="col-2 text-center">Internship</h3>
+        <ul class="col-6">
+          <li>software developer at ...</li>
+          <li>building and using tests to improve existing projects</li>
+          <li>April,2019 to August,2019</li>
+        </ul>
+        <div class="col-2">
+        </div>
+    </div>
+    <div class="row experience-item">
+        <div class="col-2">
+        </div>
+        <h3 class="col-2 text-center">Internship</h3>
+        <ul class="col-6">
+          <li>software developer at ...</li>
+          <li>building and using tests to improve existing projects</li>
+          <li>April,2019 to August,2019</li>
+        </ul>
+        <div class="col-2">
+        </div>
+    </div>
+  -->
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
 </html>
+
+
+
