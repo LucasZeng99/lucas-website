@@ -1,5 +1,5 @@
 <template>
-  <div id="app" @keydown="keyDownToBus">
+    <div>
     <app-header></app-header>
     <router-view/>
     <app-footer></app-footer>
@@ -17,11 +17,6 @@ export default {
     'app-header': Header,
     'app-footer': Footer,
   },
-  methods: {
-    keyDownToBus () {
-      eventHub.$emit('keydown', key)
-    }
-  }
 }
 </script>
 

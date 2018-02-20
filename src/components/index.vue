@@ -7,14 +7,6 @@
 
 export default {
 	name: 'index',
-	data() {
-		return{
-			
-		}
-	},
-	components: {
-	},
-
 }
 
 </script>

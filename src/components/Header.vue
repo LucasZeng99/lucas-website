@@ -11,10 +11,6 @@
 
 export default {
 	name: "appHeader",
-	/*data() {
-		return {
-		}
-	}*/
 }
 
 </script>
