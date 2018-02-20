@@ -1,12 +1,17 @@
 <template>
 	<div class="container" >
+		<todo-list></todo-list>
 	</div>
 </template>
 
 <script>
+import todoList from './todoList/todoList'
 
 export default {
 	name: 'index',
+	components: {
+		'todo-list': todoList,
+	}
 }
 
 </script>
