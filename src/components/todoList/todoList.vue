@@ -40,7 +40,6 @@ export default {
 			}).then(function(data) {
 				var name = data.body.name
 				this.todos[this.todos.indexOf(item)].name = name
-				console.log(data.body)
 			})
 			inputNum++
 			this.newTodo = ''
@@ -57,13 +56,13 @@ export default {
 				}
 			}
 			}
-			console.log(item)*/
+			(item)*/
 		/*	var item = {
 			}
 			item['name'] = this.todos[id].name
-			console.log(item)
+			(item)
 			this.$http.delete('https://mynote-example.firebaseio.com/todolist.json', item).then(function(data) {
-				console.log(data)
+				(data)
 			})*/
 			this.todos.splice(id, 1)
 			this.$http.delete('https://mynote-example.firebaseio.com/todolist.json')
@@ -88,18 +87,17 @@ export default {
 		this.$http.get("https://mynote-example.firebaseio.com/todolist.json").then(function(data){
 			if (!data.body) {
 				this.todos = []
-			}else {
+			}
+			else {
 				var names = []
 				for (name in data.body){
 					names.push(name)
 				}
 				var items = Object.values(data.body)
-				console.log(items)
 				for (let item in items) {
 					items[item].name = names[item]
 					this.todos.push(items[item])
 				}
-				console.log(this.todos)
 			}
 		})
 	},
