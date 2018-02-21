@@ -69,12 +69,9 @@ export default {
 			for (let id in this.todos) {
 				this.$http.post('https://mynote-example.firebaseio.com/todolist.json', this.todos[id])
 			}
-
-			
 		},
 		completeTodo(index) {
 			this.todos[index].completed = true
-			
 		},
 		editTodo(index) {
 			this.todos[index].completed = false
