@@ -7,7 +7,7 @@
 				<div class="todo-item">
 					<input type="checkbox" @click="clickTodo(index)" :checked="todos[index].completed">
 					<input v-model="todos[index].content" @keydown="editTodo(index)" @keyup.enter="completeTodo(index)" :class="{ 'completed': todos[index].completed }" >
-					<button @click="removeTodo">X</button>
+					<button @click="removeTodo(index)">X</button>
 				</div>
 				
 			</li>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-var inputNum = 1
+var inputNum = 0
 export default {
 	name: 'todoList',
 	data () {
@@ -27,27 +27,81 @@ export default {
 	},
 	methods: {
 		addTodo: function() {
-			this.todos.push({
-				key: inputNum++,
+			var newTodo = this.newTodo
+			var item = {
+				content: newTodo,
+				completed: false,
+				name: ''
+			}
+			this.todos.push(item)
+			this.$http.post('https://mynote-example.firebaseio.com/todolist.json',{
 				content: this.newTodo,
 				completed: false,
+			}).then(function(data) {
+				var name = data.body.name
+				this.todos[this.todos.indexOf(item)].name = name
+				console.log(data.body)
 			})
+			inputNum++
 			this.newTodo = ''
 		},
 		removeTodo(id) {
+/*			var name = this.todos[id].name
+			var completed = this.todos[id].completed
+			var content = this.todos[id].content
+			var item = {
+				'body':{
+				name: {
+					'completed': completed,
+					'coontent': content,
+				}
+			}
+			}
+			console.log(item)*/
+		/*	var item = {
+			}
+			item['name'] = this.todos[id].name
+			console.log(item)
+			this.$http.delete('https://mynote-example.firebaseio.com/todolist.json', item).then(function(data) {
+				console.log(data)
+			})*/
 			this.todos.splice(id, 1)
+			this.$http.delete('https://mynote-example.firebaseio.com/todolist.json')
+			for (let id in this.todos) {
+				this.$http.post('https://mynote-example.firebaseio.com/todolist.json', this.todos[id])
+			}
+
+			
 		},
 		completeTodo(index) {
 			this.todos[index].completed = true
+			
 		},
 		editTodo(index) {
-
 			this.todos[index].completed = false
-			/*console.log(this.todos[index].completed)*/
 		},
 		clickTodo(index) {
 			this.todos[index].completed = !this.todos[index].completed
-		}
+		},
+	},
+	created() {
+		this.$http.get("https://mynote-example.firebaseio.com/todolist.json").then(function(data){
+			if (!data.body) {
+				this.todos = []
+			}else {
+				var names = []
+				for (name in data.body){
+					names.push(name)
+				}
+				var items = Object.values(data.body)
+				console.log(items)
+				for (let item in items) {
+					items[item].name = names[item]
+					this.todos.push(items[item])
+				}
+				console.log(this.todos)
+			}
+		})
 	},
 }
 
@@ -79,7 +133,7 @@ button {
 
 	margin: 0;
 	display: block;
-	width: 400px;
+	max-width: 400px;
 	background-color: #456A6A;
 	text-align: center;
 	min-height: 100%;
