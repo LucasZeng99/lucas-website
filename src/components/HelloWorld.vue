@@ -3,6 +3,8 @@
   <div class="hello">
     <h1>hello</h1>
     <h2>welcome to my vue.js app</h2>
+    <h2>feel free to view my website,</h2>
+    <h2>to view the index you have to log in/sign up.</h2>
   </div>
   </div>
 </template>

@@ -1,17 +1,21 @@
 <template>
-	<div class="container" >
+	<div class="container">
 		<todo-list></todo-list>
 	</div>
 </template>
 
 <script>
 import todoList from './todoList/todoList'
-
 export default {
 	name: 'index',
 	components: {
 		'todo-list': todoList,
-	}
+	},
+	methods: {
+	},
+	
+
+    
 }
 
 </script>
@@ -24,4 +28,10 @@ div.container{
 	background-color: #E1EEE6;
 }
 
+div.back {
+	display: inline-block;
+	width:500px;
+	height:500px;
+	background-color: yellow;
+}
 </style>
