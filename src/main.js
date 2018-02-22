@@ -15,7 +15,9 @@ var config = {
     storageBucket: "mynote-example.appspot.com",
     messagingSenderId: "555955094319"
   };
-firebase.initializeApp(config);
+firebase.initializeApp(config);	
+
+
 new Vue({
   el: '#app',
   router,

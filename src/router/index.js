@@ -4,6 +4,8 @@ import HelloWorld from '@/components/HelloWorld'
 import Index from '@/components/index'
 import Login from '@/components/Login'
 import SignUp from '@/components/SignUp'
+import showBlog from '@/components/blog/showBlog'
+import addBlog from '@/components/blog/addBlog'
 import firebase from 'firebase'
 Vue.use(Router)
 
@@ -34,6 +36,19 @@ let router = new Router({
      /* meta: {
         requiresAuth: true
       }*/
+    },
+    {
+      path: '/blog',
+      name: 'showBlog',
+      component: showBlog
+    },
+    {
+      path: '/add-blog',
+      name: 'addBlog',
+      component: addBlog,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/index',

@@ -3,8 +3,10 @@
 		<nav class="index">
 			<router-link to="/index" exact><p>index</p></router-link>
 			<router-link to="/hello" exact><p>hello</p></router-link>
+			<router-link to="/blog" exact><p>blog</p></router-link>
+			<router-link to="/add-blog" exact><p>add blog</p></router-link>
+			<button @click="logout" class="logbtn">logout</button>
 			<button @click="login" class="logbtn">login</button>
-			<button @click="logout" class="logbtn">out</button>
 		</nav>
 	</nav>
 </template>
