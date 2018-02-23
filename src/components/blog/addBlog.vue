@@ -39,6 +39,7 @@ export default {
 				updates['/blogs/' + newPostKey] = postData;
 				firebase.database().ref().update(updates)
 			}
+			this.$router.replace('/blog')
 		}
 	}
 }

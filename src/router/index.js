@@ -66,7 +66,6 @@ router.beforeEach((to, from, next) => {
 
   if (requiresAuth && !currentUser) {
     next('login')
-    console.log('requiresAuth: ', requiresAuth, '!currentUser: ', !currentUser)
   }
   else next()
 })

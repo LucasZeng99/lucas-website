@@ -1,6 +1,7 @@
 # lucaszeng99.github.io
 
-> A Vue.js project
+> A Vue.js-based peronsal website.
+> intended to practice web programming skills.
 
 ## Build Setup
 
