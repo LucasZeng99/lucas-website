@@ -6,6 +6,7 @@ import Login from '@/components/Login'
 import SignUp from '@/components/SignUp'
 import showBlog from '@/components/blog/showBlog'
 import addBlog from '@/components/blog/addBlog'
+import singleBlog from '@/components/blog/singleBlog'
 import firebase from 'firebase'
 Vue.use(Router)
 
@@ -38,7 +39,7 @@ let router = new Router({
       }*/
     },
     {
-      path: '/blog',
+      path: '/blogs',
       name: 'showBlog',
       component: showBlog
     },
@@ -51,12 +52,17 @@ let router = new Router({
       }
     },
     {
-      path: '/index',
-      name: 'index',
+      path: '/todo',
+      name: 'todo-index',
       component: Index,
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: '/blog/:id',
+      name: 'singleBlog',
+      component: singleBlog,
     }
     ]
 })

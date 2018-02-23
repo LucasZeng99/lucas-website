@@ -1,9 +1,9 @@
 <template>
 	<nav>
 		<nav class="index">
-			<router-link to="/index" exact><p>index</p></router-link>
+			<router-link to="/todo" exact><p>todo</p></router-link>
 			<router-link to="/hello" exact><p>hello</p></router-link>
-			<router-link to="/blog" exact><p>blog</p></router-link>
+			<router-link to="/blogs" exact><p>blog</p></router-link>
 			<router-link to="/add-blog" exact><p>add blog</p></router-link>
 			<button @click="logout" class="logbtn">logout</button>
 			<button @click="login" class="logbtn">login</button>
@@ -42,6 +42,7 @@ nav{
 	height: 60px;
 	margin: 0 auto;
 	background-color: #4E874E;
+	margin-bottom: 60px;
 }
 nav.index {
 	height: 100%;
@@ -70,18 +71,17 @@ a >p{
 }
 .logbtn {
 	display: inline-block;
-	font-size: 20px;
-	float: right;
 	height: 100%;
 	width: 80px;
 	padding: 0;
+/* 	border-right: 1px solid #AEF9C9; */
+	background-color: #b1b1b1;
 	border: none;
-	border-right: 3px solid #8AB599;
-	background-color: #444;
+	cursor: pointer;
+	font-size: 17px;
 	text-decoration: none;
 	color: #fff;
 	text-align: center;
 	vertical-align: middle;
-	cursor: pointer;
 }
 </style>

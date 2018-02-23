@@ -32,16 +32,16 @@ export default {
 				  // Write the new post's data simultaneously in the posts list and the user's post list.
 				}
 				var updates = {};
-				updates['/blogs/' + newPostKey] = postData;
+				updates['/blog/' + newPostKey] = postData;
 				firebase.database().ref().update(updates)
 			}
-			this.$router.replace('/blog')
+			this.$router.replace('/blogs')
 		}
 	},
 	created() {
 		var user = firebase.auth().currentUser
 		if(user.email != 'lucaszeng99@gmail.com') {
-			this.$router.replace('/blog')
+			this.$router.replace('/blogs')
 			alert('Sorry, you are not me.')
 		}
 	}

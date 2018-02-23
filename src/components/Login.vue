@@ -74,7 +74,7 @@ input {
 button {
 	cursor: pointer;
 	font-size: 14px;
-	width: 80px;
+	padding: 10px;
 	height: 40px;
 	margin-top: 20px;
 	background-color: #ddd;
