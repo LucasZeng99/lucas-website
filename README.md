@@ -1,4 +1,4 @@
-# lucaszeng99.github.io
+# lucas-website
 
 > A Vue.js-based peronsal website.
 > intended to practice web programming skills.
