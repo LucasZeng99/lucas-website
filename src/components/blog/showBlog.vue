@@ -1,7 +1,7 @@
 <template>
 	<div class="blog-view">
 		<h1>blog</h1>
-		<article v-for="blog in blogs">
+		<article v-for="(blog, key) in blogs" :key="key">
 			<h2 class="article-title">{{blog.title}}</h2>
 			<p class="article-content">{{blog.content}}</p>
 		</article>

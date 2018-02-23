@@ -1,16 +1,12 @@
 <template>
 	<div class="add-blog">
-		<div class="preview">
-			<h3>Preview: {{title}}</h3>
-			<textarea rows="10" cols="30" readonly class="preview-content" @keyup.enter="postBlog">{{content}}</textarea>
-		</div>
 		<div class="blog-container">
 			<h2>Add a Blog</h2>
 			<form>
-				<p>title: </p><input type="text" v-model="title"><br>
-				<p>content: </p><textarea rows="10" cols="30" v-model="content"></textarea>
+				<p>title: </p><input type="text" v-model="title"><button @click="postBlog">submit</button>
+				<p>content: </p><textarea rows="10" cols="50" v-model="content"></textarea>
 			</form>
-			<button @click="postBlog">submit</button>
+			
 		</div>
 	</div>
 </template>
@@ -41,6 +37,13 @@ export default {
 			}
 			this.$router.replace('/blog')
 		}
+	},
+	created() {
+		var user = firebase.auth().currentUser
+		if(user.email != 'lucaszeng99@gmail.com') {
+			this.$router.replace('/blog')
+			alert('Sorry, you are not me.')
+		}
 	}
 }
 
@@ -48,10 +51,8 @@ export default {
 
 <style scoped>
 .add-blog{
-	display: block;
-	margin: 0 25% 0 auto;
-	max-width: 1200px;
-	text-align: center;
+	text-align: left;
+	padding: 20px;
 }
 
 input {
@@ -64,22 +65,18 @@ textarea {
 	min-height: 150px;
 	min-width: 300px;
 }
-.preview {
-	display: inline-block;
-	text-align: left;
-	white-space: pre-wrap;
-}
-.preview-content {
-	outline: none;
-	border: 2px solid #ccc;
-	border-radius: 4px;
-	cursor: default;
-}
-.preview > h3{
+.blog-container {
+	max-width: 800px;
 	margin: 0 auto;
 }
-
-.blog-container {
+.blog-container p {
+	margin: 0;
+}
+button {
 	display: inline-block;
+	padding: 10px;
+	width: 80px;
+	height: 40px;
+	margin-left: 20px;
 }
 </style>

@@ -4,7 +4,7 @@
 		<input id="input" type="text" v-model="newTodo" placeholder="Add a Todo" @keyup.enter="addTodo"/>
 		<h2>added todos:</h2>
 		<draggable v-model="todos" @start="drag=true" @end="drag=false" >
-			<div v-for="(todo, index) in todos">
+			<div v-for="(todo, key) in todos" :key="key">
 				<div class="todo-item">
 					<input type="checkbox" @click="clickTodo(index)" :checked="todos[index].completed">
 					<input v-model="todos[index].content" @keydown="editTodo(index)" @keyup.enter="completeTodo(index)" :class="{ 'completed': todos[index].completed }" >
@@ -18,6 +18,7 @@
 
 <script>
 import draggable from 'vuedraggable'
+
 var inputNum = 0
 export default {
 	name: 'todoList',
