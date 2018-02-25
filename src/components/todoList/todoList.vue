@@ -170,7 +170,6 @@ button {
   background-color: #456a6a;
   text-align: center;
   min-height: 300px;
-  min-width: 400px;
   max-height: 400px;
   padding: 20px;
   padding-top: 0;
@@ -181,12 +180,11 @@ li > * {
   top: 20%;
 }
 .todo-item {
-  position: relative;
-  left: 10%;
   max-width: 300px;
   background-color: #ddd;
   margin-top: 2px;
-  padding: 4px 0;
+  padding: 6px;
+  margin: 8px;
 }
 #todo-list {
   position: absolute;

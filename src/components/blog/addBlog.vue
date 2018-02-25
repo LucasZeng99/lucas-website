@@ -2,9 +2,9 @@
 	<div class="add-blog">
 		<div class="blog-container">
 			<h2>Add a Blog</h2>
-			<form>
+			<form spellcheck="true">
 				<p>title: </p><input type="text" v-model="title"><button @click="postBlog">submit</button>
-				<p>content: </p><textarea rows="10" cols="50" v-model="content"></textarea>
+				<p>content: </p><textarea spellcheck="true" rows="10" cols="50" v-model="content" wrap="hard"></textarea>
 			</form>
 			
 		</div>
@@ -64,6 +64,7 @@ textarea {
 	margin-top: 20px;
 	min-height: 150px;
 	min-width: 300px;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .blog-container {
 	max-width: 800px;

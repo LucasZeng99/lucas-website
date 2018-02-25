@@ -57,15 +57,17 @@ h3{
 	margin-bottom: 30px;
 }
 input {
+	border: none;
+	border-top: 1px solid #6bc995;
 	display: block;
 	margin: 6px auto;
 	padding: 10px;
-	width: 20%
+	width: 200px;
 }
 button {
 	cursor: pointer;
 	font-size: 14px;
-	width: 6%;
+	width: 80px;
 	height: 40px;
 	margin-top: 20px;
 	background-color: #ddd;

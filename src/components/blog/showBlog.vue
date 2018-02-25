@@ -49,7 +49,7 @@ export default {
   max-width: 900px;
   min-height: 390px;
   display: block;
-  padding-top: 20px;
+  padding: 20px;
   margin: 0 auto;
   box-sizing: border-box;
 }

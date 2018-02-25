@@ -33,19 +33,26 @@ export default {
 .single-blog {
     max-width: 750px;
     margin: 0 auto;
-    border: 2px solid rgb(180, 180, 180);
-    padding: 30px;
+    
+    padding: 15px;
     margin-bottom: 30px;
-    min-height: 350px;
+    
 }
-
+article {
+    border: 2px solid rgb(180, 180, 180);
+    padding: 20px;
+    min-height: 320px;
+}
 article > p {
     margin: 10px;
     padding: 10px;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 article > h2 {
     margin-bottom: 10px;
     border-bottom: 1px solid cadetblue;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 </style>
