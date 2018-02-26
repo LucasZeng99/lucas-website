@@ -10,7 +10,6 @@
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import eventHub from './components/eventHub.js'
-
 export default {
   name: 'App',
   components: {
@@ -24,11 +23,15 @@ export default {
 body{
   margin:0;
   background-color: #E1EEE6;
+
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+html {
+  background-position: center;
 }
 </style>

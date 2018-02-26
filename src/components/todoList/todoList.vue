@@ -188,6 +188,8 @@ li > * {
 }
 #todo-list {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 9;
   background-color: #f1f1f1;
   border: 1px solid #d3d3d3;

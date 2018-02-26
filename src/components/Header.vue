@@ -1,4 +1,6 @@
 <template>
+	<div>
+		<div class="header-image">
 		<nav class="index">
 			<router-link to="/todo" exact><p>todo</p></router-link>
 			<router-link to="/hello" exact><p>hello</p></router-link>
@@ -7,6 +9,8 @@
 			<button @click="logout" class="logbtn">logout</button>
 			<button @click="login" class="logbtn">login</button>
 		</nav>
+		</div>
+		</div>
 </template>
 
 <script>
@@ -35,13 +39,13 @@ export default {
 	margin: 0;
 	display: block;
 }
-nav.index {
+.index {
 	display: flex;
 	max-width: 100%;
 	height: 60px;
 	margin: 0 auto;
-	margin-bottom: 40px;
 	text-align: left;
+
 }
 a{
 	flex-grow: 2;
@@ -49,12 +53,12 @@ a{
 	flex-wrap: wrap;
 	height: 100%;
 	padding: 0;
-	background-color: rgba(68, 68, 68, 0.3);
+	background-color: rgba(68, 68, 68, 0.5);
 	text-decoration: none;
 	color: #fff;
 	text-align: center;
 	vertical-align: middle;
-	transition: 0.5s;
+	transition: 0.3s;
 }
 a >p{
 	position: relative;
@@ -62,7 +66,7 @@ a >p{
 	transform: translateY(-50%);
 }
 .router-link-active {
-	background-color: rgba(51, 51, 51, 0.3);
+	background-color: rgba(51, 51, 51, 0.5);
 	border-bottom: 2px solid #A2F7E2;
 }
 .logbtn {
@@ -72,7 +76,7 @@ a >p{
 	height: 100%;
 	padding: 0;
 /* 	border-right: 1px solid #AEF9C9; */
-	background-color: rgba(177, 177, 177,0.3);
+	background-color: rgba(177, 177, 177,0.5);
 	border: none;
 	cursor: pointer;
 	font-size: 17px;
@@ -80,7 +84,7 @@ a >p{
 	color: rgb(51, 51, 51);
 	text-align: center;
 	vertical-align: middle;
-	transition: 0.5s;
+	transition: 0.3s;
 }
 
 .logbtn:hover {
@@ -90,5 +94,14 @@ a >p{
 
 a:hover {
 	background-color: rgba(112, 112, 112,0.3);
+}
+
+.header-image{
+	width: 100%;
+	height: 400px;
+	background-image: url('/static/img/header-green-min.jpeg');
+	background-size: 1200px;
+	background-position: center;
+	margin-bottom: 20px;
 }
 </style>

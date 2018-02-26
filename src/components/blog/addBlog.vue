@@ -53,6 +53,7 @@ export default {
 .add-blog{
 	text-align: left;
 	padding: 20px;
+	display: flex;
 }
 
 input {
@@ -61,20 +62,19 @@ input {
 }
 textarea {
 	padding: 10px;
-	margin-top: 20px;
+	margin: 10px;
 	min-height: 150px;
-	min-width: 300px;
+	max-width: 300px;
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .blog-container {
-	max-width: 800px;
+	max-width: 600px;
 	margin: 0 auto;
 }
 .blog-container p {
 	margin: 0;
 }
 button {
-	display: inline-block;
 	padding: 10px;
 	width: 80px;
 	height: 40px;
