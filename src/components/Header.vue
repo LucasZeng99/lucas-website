@@ -9,6 +9,7 @@
 			<button @click="logout" class="logbtn">logout</button>
 			<button @click="login" class="logbtn">login</button>
 		</nav>
+		<router-link to="/hello" class="img-stealth"><img src="/static/img/myself-stealth.png" alt="me" class="img-stealth"></router-link>
 		</div>
 		</div>
 </template>
@@ -93,15 +94,30 @@ a >p{
 }
 
 a:hover {
-	background-color: rgba(112, 112, 112,0.3);
+	background-color: rgba(177, 177, 177,0.5);
 }
 
 .header-image{
 	width: 100%;
 	height: 400px;
 	background-image: url('/static/img/header-green-min.jpeg');
-	background-size: 1200px;
+	background-size: 1300px;
 	background-position: center;
 	margin-bottom: 20px;
+}
+
+.img-stealth {
+	width: 200px;
+	height: auto;
+	position: absolute;
+	left: 50%;
+	margin-top: 40px;
+	transform: translateX(-50%);
+	border: none;
+	transition: 0.6s;
+}
+
+img.img-stealth:hover {
+	filter: hue-rotate(360deg) saturate(3.3) contrast(200%);
 }
 </style>

@@ -180,11 +180,16 @@ li > * {
   top: 20%;
 }
 .todo-item {
+  display: flex;
   max-width: 300px;
   background-color: #ddd;
   margin-top: 2px;
   padding: 6px;
   margin: 8px;
+}
+
+.todo-item > * {
+  flex-grow: 1;
 }
 #todo-list {
   position: absolute;
